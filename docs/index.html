@@ -1,0 +1,219 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<title>PJM : オンラインヘルプ</title>
+</head>
+<body>
+
+<!-- コンテナ開始 -->
+<div id="container">
+  <div class="header">
+    プロジェクト管理ツール&nbsp;&nbsp;オンラインヘルプ
+  </div>
+  <div id="nav">
+    <ul>
+      <li><a href="#summary" class="link">概要</a></li>
+      <li><a href="#login" class="link">ログイン/ログアウト</a></li>
+      <li><a href="#project" class="link">プロジェクト</a></li>
+      <li><a href="#task" class="link">タスク</a>
+        <ul>
+          <li><a href="#tasklist" class="link">リスト</a></li>
+          <li><a href="#taskgantt" class="link">タイムライン(ガント)</a></li>
+          <li><a href="#taskboard" class="link">カンバン</a></li>
+          <li><a href="#taskcommon" class="link">共通(フィルタ)</a></li>
+        </ul>
+      </li>
+      <li><a href="#dashboard" class="link">ダッシュボード</a>
+        <ul>
+          <li><a href="#dashboardlist" class="link">リスト</a></li>
+          <li><a href="#dashboardgantt" class="link">タイムライン(ガント)</a></li>
+          <li><a href="#dashboardcount" class="link">件数グラフ</a></li>
+          <li><a href="#dashboardcost" class="link">コスト一覧</a></li>
+        </ul>
+      </li>
+      <li ><a href="#profile" class="link">個人設定</a></li>
+      <li ><a href="#invite" class="link">メンバー招待</a></li>
+    </ul>
+  </div>
+  <div id="content">
+    <div id="manual">
+      <div id="top" class="article">
+        <h3 id="summary" class="article-header">概要<a class="article-header-anchor" href="#summary"><img src="img/link.png" border="0"></a></h3>
+        <div class="article-content">
+          プロジェクト管理ツールは、作業の計画やスケジュール、および状況を管理・把握するためのツールです。<br>
+          開発や生産管理といったプロジェクトはもちろん、個人のタスク管理などにも利用することができます。<br>
+        </div>
+        <h3 id="login" class="article-header">ログイン/ログアウト<a class="article-header-anchor" href="#login"><img src="img/link.png" border="0"></a></h3>
+        <div class="article-content">
+          ログイン時のアクセスURLは以下のとおりです。（ATLED用）<br>
+          <a class="inline-link" href="http://awpjm.atledcloud.jp/#/login/p706xg0">http://awpjm.atledcloud.jp/#/login/p706xg0</a><br>
+          <br>
+          登録時のメールアドレスおよびパスワードを入力し、ログインします。<br>
+          <br>
+          ログアウトを行う場合は、ヘッダー部右上からログアウトを選択してください。<br>
+          <img class="inline-image" src="img/article/login1.png" /><br>
+        </div>
+        <h3 id="project" class="article-header">プロジェクト<a class="article-header-anchor" href="#project"><img src="img/link.png" border="0"></a></h3>
+        <div class="article-content">
+          プロジェクト管理ツールでは、まずプロジェクトを作成し、プロジェクトにメンバーを所属させることから開始します。<br>
+          <br>
+          プロジェクトを新規作成する場合はプロジェクト一覧上部にある<br>
+          <b>&nbsp;[新規プロジェクト]&nbsp;</b>ボタンを押下します。<br>
+          <img class="inline-image" src="img/article/project1.png" /><br>
+          プロジェクトを編集する場合は画面右上にある<br>
+          <b>&nbsp;[プロジェクト設定]&nbsp;</b>ボタンを押下します。<br>
+          <img class="inline-image" src="img/article/project2.png" /><br>
+          プロジェクトに入力できる項目は以下のとおりです。<br>
+          <table>
+            <tr><th>項目</th><th>説明</th></tr>
+            <tr><td>プロジェクト名</td><td>プロジェクトの名称です。</td></tr>
+            <tr><td>概要</td><td>プロジェクトの概要や説明、詳細です。</td></tr>
+            <tr><td>メンバー</td><td>プロジェクトのメンバーです。ここで設定したメンバーに、タスクを割り振ることができます。<br>
+              自分自身を削除することはできません。</td></tr>
+            <tr><td>マイルストーン</td><td>プロジェクトの大まかな節目などを設定します。<br></td></tr>
+            <tr><td>ステータス</td><td>タスクに付与するステータスを定義します。<br>
+              タスクの状態を管理するための機能です。（作業中、完了など）<br>
+              進捗率0%,100%のステータスは必ず設定する必要があります。<br>
+              また、ここで設定した内容が、カンバンビューの各ステータスとなります。
+            </td></tr>
+            <tr><td>ラベル</td><td>タスクに付与するラベルを定義します。<br>
+              タスクに目印を付与するための機能です。（優先度など）<br>
+            </td></tr>
+            <tr><td>予定期間</td><td>プロジェクトの予定作業期間です。</td></tr>
+            <tr><td>実績</td><td>プロジェクトの実績作業期間です。</td></tr>
+            <tr><td>進捗率</td><td>プロジェクトの進捗率です。</td></tr>
+          </table><br>
+        </div>
+        <h3 id="task" class="article-header">タスク<a class="article-header-anchor" href="#task"><img src="img/link.png" border="0"></a></h3>
+        <div class="article-content">
+          プロジェクト管理ツールにおけるタスクは、１つの作業を表します。<br>
+          タスクにはプロジェクトメンバーを割り当てることができ、作業期間やそれかかる時間（工数）、進捗状況などを管理できます。<br>
+          さらに、タスクには親子関係（サブタスク）を持たせたり、前後（依存）関係を持たせることができます。<br>
+          <br>
+          タスクに入力できる項目は以下のとおりです。<br>
+          <table>
+            <tr><th>項目</th><th>説明</th></tr>
+            <tr><td>タスク名</td><td>タスクの名称です。</td></tr>
+            <tr><td>概要</td><td>タスクの概要や説明、詳細です。</td></tr>
+            <tr><td>メンバー</td><td>タスクのメンバーです。複数人指定することができます。</tr>
+            <tr><td>前のタスク/次のタスク</td><td>タスクの前後関係を指定します。<br>タイムライン上に依存線が表示されます。<br></td></tr>
+            <tr><td>親タスク</td><td>親タスクです。</tr>
+            <tr><td>サブタスク</td><td>サブタスクです。</tr>
+            <tr><td>予定期間</td><td>タスクの予定作業期間です。</td></tr>
+            <tr><td>予定作業量</td><td>タスクの実行にかかる予定作業量です。</td></tr>
+            <tr><td>実績</td><td>プロジェクトの実績作業期間です。</td></tr>
+            <tr><td>実績作業量</td><td>タスクの実行にかかった作業量です。</td></tr>
+            <tr><td>ステータス</td><td>タスクのステータスです。<br>
+              設定内容に応じ、進捗率が変化します。</td></tr>
+            <tr><td>進捗率</td><td>タスクの進捗率です。</td></tr>
+            <tr><td>ラベル</td><td>タスクにラベルを付与します。<br>
+              プロジェクトで定義したラベルを複数選択することができます。<br>
+            </td></tr>
+          </table><br>
+          またタスクにはコメントの入力およびメールでの通知を行うことができます。<br>
+          <img class="inline-image" src="img/article/task1.png" /><br>
+          赤枠部左側にコメントを入力し、右側に（メール）通知するユーザーを選択します。<br>
+          通知先はプロジェクトメンバーから選択可能です。<br>
+          送信または<b>&nbsp;[Ctrl]キー&nbsp;+&nbsp;[Enter]キー&nbsp;</b>でコメントが送信されます。<br>
+          <br>
+          入力したコメントは、タスク詳細画面の最下部に表示されます。<br>
+          コメントを編集、削除したい場合は、コメント右側にあるメニューから実施します。<br>
+          <img class="inline-image" src="img/article/task2.png" /><br>
+        </div>
+        <h4 id="tasklist" class="article-header sub">リストビュー<a class="article-header-anchor" href="#tasklist"><img src="img/link.png" border="0"></a></h4>
+        <div class="article-content">
+          タスクを一覧で確認するための画面です。<br>
+          完了したタスクは、サブタスクを展開しない状態で表示します。<br>
+        </div>
+        <h4 id="taskgantt" class="article-header sub">タイムラインビュー<a class="article-header-anchor" href="#taskgantt"><img src="img/link.png" border="0"></a></h4>
+        <div class="article-content">
+          タスクをタイムライン（ガントチャートで）確認するための画面です。<br>
+          完了したタスクは、サブタスクを展開しない状態で表示します。<br>
+          主にスケジュールを計画・確認するために利用します。<br>
+          <br>
+          タスクを新規作成する場合は<b>&nbsp;[Ctrl]キーを押下しながら、マウスでカレンダー上をドラッグ&nbsp;</b>します<br>
+          <img class="inline-image" src="img/article/taskgantt1.gif" /><br>
+          <br>
+          また、ガントチャート上では、タスクの予定作業期間および進捗率を変更できます。<br>
+          <img class="inline-image" src="img/article/taskgantt2.gif" /><br>
+          <br>
+          タスクの詳細を開く場合は<b>タスク一覧上のタスク</b>をクリックします<br>
+          <img class="inline-image" src="img/article/taskgantt3.png" /><br>
+          タスク一覧の表示項目は<img src="img/geer.png" />から変更できます。<br>
+          また、ヘッダー列（タスク名や担当など）をクリックすることで、その列の内容でソートが可能です。<br>
+        </div>
+        <h4 id="taskboard" class="article-header sub">カンバンビュー<a class="article-header-anchor" href="#taskboard"><img src="img/link.png" border="0"></a></h4>
+        <div class="article-content">
+          タスクをカンバンビューで確認するための画面です。<br>
+          主にステータスの確認・変更を簡単に行うための画面です。<br>
+          <br>
+          タスクを新規作成する場合は、配置したいカンバン上にある<img src="img/boardplus.png" />を押下します<br>
+          <br>
+          また、カンバンビュー上では<b>&nbsp;ドラッグ＆ドロップ&nbsp;</b>で、タスクのステータスを変更することができます。<br>
+          <img class="inline-image" src="img/article/taskboard1.gif" /><br>
+          タスクの詳細を開く場合はタスクをクリックします。<br>
+          <br>
+          タスクがサブタスクを持つ場合、「サブ」ボタンをクリックすることで<br>
+          そのタスクが持つサブタスクをカンバンビューで表示することができます。<br>
+          <img class="inline-image" src="img/article/taskboard2.png" /><br>
+        </div>
+        <h4 id="taskcommon" class="article-header sub">共通（フィルタ）<a class="article-header-anchor" href="#taskcommon"><img src="img/link.png" border="0"></a></h4>
+        <div class="article-content">
+          タスクの各ビューにおいては条件を指定したフィルタ（絞り込み）を行うことができます。<br>
+          フィルタを行うには、各ビューの右側にある以下のアイコンをクリックし、フィルタパネルを開いてください。<br>
+          <img class="inline-image" src="img/article/taskcommon1.png" /><br>
+          <br>
+          フィルタパネルでは<b>&nbsp;メンバー、期限、ステータス&nbsp;および&nbsp;ラベル&nbsp;</b>による絞り込みを<br>
+          行うことができます。<br>
+        </div>
+        <h3 id="dashboard" class="article-header">ダッシュボード<a class="article-header-anchor" href="#dashboard"><img src="img/link.png" border="0"></a></h3>
+        <div class="article-content">
+          ダッシュボードは、各プロジェクトの情報をまとめて表示するために利用する機能です。<br>
+          情報の表示のためにはダッシュボードにガジェットを配置します。<br>
+          ガジェットの種類には<b>&nbsp;リスト、タイムライン、件数グラフ、および&nbsp;コスト一覧&nbsp;</b>があります。<br>
+          <img class="inline-image" src="img/article/dashboard1.png" /><br>
+          ダッシュボードを編集するには鍵マークをクリックします。<br>
+          <img class="inline-image" src="img/article/dashboard2.png" /><br>
+          ガジェットを追加するにはプラスマークをクリックし、再度鍵マークをクリックすると、ダッシュボードの状態が保存されます。<br>
+          <img class="inline-image" src="img/article/dashboard3.png" /><br>
+          ダッシュボードの編集中は、各ガジェットを<b>&nbsp;ドラッグ＆ドロップ&nbsp;</b>で移動することができます。<br>
+          <img class="inline-image" src="img/article/dashboard4.gif" /><br>
+          <br>
+          各ガジェットの設定項目は以下のとおりです。<br>
+        </div>
+        <h4 id="dashboardlist" class="article-header sub">リスト<a class="article-header-anchor" href="#dashboardlist"><img src="img/link.png" border="0"></a></h4>
+        <div class="article-content">
+          マニュアルコンテンツ
+        </div>
+        <h4 id="dashboardgantt" class="article-header sub">タイムライン<a class="article-header-anchor" href="#dashboardgantt"><img src="img/link.png" border="0"></a></h4>
+        <div class="article-content">
+          マニュアルコンテンツ
+        </div>
+        <h4 id="dashboardcount" class="article-header sub">件数グラフ<a class="article-header-anchor" href="#dashboardcount"><img src="img/link.png" border="0"></a></h4>
+        <div class="article-content">
+          マニュアルコンテンツ
+        </div>
+        <h4 id="dashboardcost" class="article-header sub">コスト一覧<a class="article-header-anchor" href="#dashboardcost"><img src="img/link.png" border="0"></a></h4>
+        <div class="article-content">
+          マニュアルコンテンツ
+        </div>
+        <h3 id="profile" class="article-header">個人設定<a class="article-header-anchor" href="#profile"><img src="img/link.png" border="0"></a></h3>
+        <div class="article-content">
+          マニュアルコンテンツ
+        </div>
+        <h3 id="invite" class="article-header">メンバー招待<a class="article-header-anchor" href="#invite"><img src="img/link.png" border="0"></a></h3>
+        <div class="article-content">
+          マニュアルコンテンツ
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    © ATLED CORP. All Rights Reserved.
+  </div>
+</div>
+<!-- コンテナ終了 -->
+
+</body>
+</html>
