@@ -15,9 +15,13 @@
     <ul>
       <li><a href="#summary" class="link">概要</a></li>
       <li><a href="#login" class="link">ログイン/ログアウト</a></li>
-      <li><a href="#project" class="link">プロジェクト</a></li>
+      <li><a href="#project" class="link">プロジェクト</a>
+        <ul class="sublist">
+          <li><a href="#projectsetting" class="link">表示設定</a></li>
+        </ul>
+      </li>
       <li><a href="#task" class="link">タスク</a>
-        <ul>
+        <ul class="sublist">
           <li><a href="#tasklist" class="link">リスト</a></li>
           <li><a href="#taskgantt" class="link">タイムライン(ガント)</a></li>
           <li><a href="#taskboard" class="link">カンバン</a></li>
@@ -25,7 +29,7 @@
         </ul>
       </li>
       <li><a href="#dashboard" class="link">ダッシュボード</a>
-        <ul>
+        <ul class="sublist">
           <li><a href="#dashboardlist" class="link">リスト</a></li>
           <li><a href="#dashboardgantt" class="link">タイムライン(ガント)</a></li>
           <li><a href="#dashboardcount" class="link">件数グラフ</a></li>
@@ -42,7 +46,8 @@
         <h3 id="summary" class="article-header">概要<a class="article-header-anchor" href="#summary"><img src="img/link.png" border="0"></a></h3>
         <div class="article-content">
           プロジェクト管理ツールは、作業の計画やスケジュール、および状況を管理・把握するためのツールです。<br>
-          開発や生産管理といったプロジェクトはもちろん、個人のタスク管理などにも利用することができます。<br>
+          開発や生産管理といったプロジェクトはもちろん、チームの課題管理や個人のTodoリストなどにも<br>
+          利用することができます。<br>
         </div>
         <h3 id="login" class="article-header">ログイン/ログアウト<a class="article-header-anchor" href="#login"><img src="img/link.png" border="0"></a></h3>
         <div class="article-content">
@@ -85,6 +90,13 @@
             <tr><td>進捗率</td><td>プロジェクトの進捗率です。</td></tr>
           </table><br>
         </div>
+        <h4 id="projectsetting" class="article-header sub">表示設定<a class="article-header-anchor" href="#projectsetting"><img src="img/link.png" border="0"></a></h4>
+        <div class="article-content">
+          プロジェクト一覧に表示するプロジェクトは、順序および表示・非表示を設定することができます。<br>
+          <img class="inline-image" src="img/article/projectsetting1.png" /><br>
+          <b>&nbsp;ドラッグ＆ドロップ&nbsp;</b>で順序を設定し、<b>&nbsp;クリック&nbsp;</b>で表示・非表示を切り替えます。<br>
+          <img class="inline-image" src="img/article/projectsetting2.gif" /><br>
+        </div>
         <h3 id="task" class="article-header">タスク<a class="article-header-anchor" href="#task"><img src="img/link.png" border="0"></a></h3>
         <div class="article-content">
           プロジェクト管理ツールにおけるタスクは、１つの作業を表します。<br>
@@ -100,7 +112,7 @@
             <tr><td>前のタスク/次のタスク</td><td>タスクの前後関係を指定します。<br>タイムライン上に依存線が表示されます。<br></td></tr>
             <tr><td>親タスク</td><td>親タスクです。</tr>
             <tr><td>サブタスク</td><td>サブタスクです。</tr>
-            <tr><td>予定期間</td><td>タスクの予定作業期間です。</td></tr>
+            <tr><td>予定期間</td><td>タスクの予定作業期間です。<br>タイムライン上に期間に応じたチャートが表示されます。</td></tr>
             <tr><td>予定作業量</td><td>タスクの実行にかかる予定作業量です。</td></tr>
             <tr><td>実績</td><td>プロジェクトの実績作業期間です。</td></tr>
             <tr><td>実績作業量</td><td>タスクの実行にかかった作業量です。</td></tr>
@@ -145,12 +157,13 @@
         </div>
         <h4 id="taskboard" class="article-header sub">カンバンビュー<a class="article-header-anchor" href="#taskboard"><img src="img/link.png" border="0"></a></h4>
         <div class="article-content">
-          タスクをカンバンビューで確認するための画面です。<br>
+          タスクをカンバンビュー表示します。<br>
           主にステータスの確認・変更を簡単に行うための画面です。<br>
           <br>
           タスクを新規作成する場合は、配置したいカンバン上にある<img src="img/boardplus.png" />を押下します<br>
           <br>
           また、カンバンビュー上では<b>&nbsp;ドラッグ＆ドロップ&nbsp;</b>で、タスクのステータスを変更することができます。<br>
+          タスクのステータスを変更すると、進捗率も自動でステータスに設定された数値に設定されます。<br>
           <img class="inline-image" src="img/article/taskboard1.gif" /><br>
           タスクの詳細を開く場合はタスクをクリックします。<br>
           <br>
@@ -184,27 +197,58 @@
         </div>
         <h4 id="dashboardlist" class="article-header sub">リスト<a class="article-header-anchor" href="#dashboardlist"><img src="img/link.png" border="0"></a></h4>
         <div class="article-content">
-          マニュアルコンテンツ
+          <table>
+            <tr><th>項目</th><th>説明</th></tr>
+            <tr><td>プロジェクト</td><td>表示したいプロジェクトを選択してください。</td></tr>
+            <tr><td>ステータス</td><td>ステータスを指定したい場合に設定してください。</td></tr>
+            <tr><td>メンバー</td><td>メンバーを指定したい場合に設定してください。</td></tr>
+            <tr><td>表示列</td><td>表示したい列を設定してください。<br></td></tr>
+          </table><br>
         </div>
         <h4 id="dashboardgantt" class="article-header sub">タイムライン<a class="article-header-anchor" href="#dashboardgantt"><img src="img/link.png" border="0"></a></h4>
         <div class="article-content">
-          マニュアルコンテンツ
+          <table>
+            <tr><th>項目</th><th>説明</th></tr>
+            <tr><td>プロジェクト</td><td>表示したいプロジェクトを選択してください。</td></tr>
+            <tr><td>ステータス</td><td>ステータスを指定したい場合に設定してください。</td></tr>
+            <tr><td>メンバー</td><td>メンバーを指定したい場合に設定してください。</td></tr>
+          </table><br>
         </div>
         <h4 id="dashboardcount" class="article-header sub">件数グラフ<a class="article-header-anchor" href="#dashboardcount"><img src="img/link.png" border="0"></a></h4>
         <div class="article-content">
-          マニュアルコンテンツ
+          <table>
+            <tr><th>項目</th><th>説明</th></tr>
+            <tr><td>プロジェクト</td><td>表示したいプロジェクトを選択してください。</td></tr>
+            <tr><td>ステータス</td><td>ステータスを指定したい場合に設定してください。</td></tr>
+            <tr><td>メンバー</td><td>メンバーを指定したい場合に設定してください。</td></tr>
+            <tr><td>横軸</td><td>ステータスまたはメンバーを指定することができます。</td></tr>
+          </table><br>
         </div>
         <h4 id="dashboardcost" class="article-header sub">コスト一覧<a class="article-header-anchor" href="#dashboardcost"><img src="img/link.png" border="0"></a></h4>
         <div class="article-content">
-          マニュアルコンテンツ
+          <table>
+            <tr><td>集計単位</td><td>プロジェクト、ステータス、またはメンバーを指定できます。</td></tr>
+            <tr><td>プロジェクト</td><td>表示したいプロジェクトを選択してください。<br>集計単位をプロジェクトとした場合、複数選択できます。<br></td></tr>
+            <tr><td>ステータス</td><td>ステータスを指定したい場合に設定してください。</td></tr>
+          </table><br>
         </div>
         <h3 id="profile" class="article-header">個人設定<a class="article-header-anchor" href="#profile"><img src="img/link.png" border="0"></a></h3>
         <div class="article-content">
-          マニュアルコンテンツ
+          個人設定では名前、プロフィール画像、パスワード更新を行うことができます。<br>
+          個人設定を行うには、ヘッダー部右上から個人設定を選択してください。<br>
+          <img class="inline-image" src="img/article/profile1.png" /><br>
         </div>
         <h3 id="invite" class="article-header">メンバー招待<a class="article-header-anchor" href="#invite"><img src="img/link.png" border="0"></a></h3>
         <div class="article-content">
-          マニュアルコンテンツ
+          メンバーを追加したい場合は、ヘッダー部右上からメンバー招待を選択してください。<br>
+          <br>
+          メールアドレスを入力・送信すると、入力されたメールアドレスに<br>
+          アカウント登録のためのメールが送信されます。<br>
+          （メールが送信されるまでに数分程度かかる場合があります。）<br>
+          <br>
+          招待を受けた側は、メールに記載されたリンクからアカウント登録画面を開き<br>
+          ユーザー情報を登録することで、プロジェクト管理ツールに参加することができます。<br>
+          <img class="inline-image" src="img/article/invite1.png" /><br>
         </div>
       </div>
     </div>
