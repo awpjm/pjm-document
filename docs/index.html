@@ -37,6 +37,10 @@
           <li><a href="#dashboardcost" class="link">コスト一覧</a></li>
         </ul>
       </li>
+      <li ><a href="#notification" class="link">通知</a></li>
+        <ul class="sublist">
+          <li><a href="#notification_personal_setting" class="link">通知設定</a></li>
+        </ul>
       <li ><a href="#profile" class="link">個人設定</a></li>
       <li ><a href="#invite" class="link">メンバー招待</a></li>
     </ul>
@@ -74,6 +78,9 @@
           <table>
             <tr><th>項目</th><th>説明</th></tr>
             <tr><td>プロジェクト名</td><td>プロジェクトの名称です。</td></tr>
+            <tr><td>運用モード</td><td>プロジェクトの運用モードです。<br>
+              「計画中」に設定されている場合は、すべての<b>通知が送信されません。</b>
+            </td></tr>
             <tr><td>概要</td><td>プロジェクトの概要や説明、詳細です。</td></tr>
             <tr><td>メンバー</td><td>プロジェクトのメンバーです。ここで設定したメンバーに、タスクを割り振ることができます。<br>
               自分自身を削除することはできません。</td></tr>
@@ -241,6 +248,39 @@
             <tr><td>ステータス</td><td>ステータスを指定したい場合に設定してください。</td></tr>
           </table><br>
         </div>
+
+        <h3 id="notification" class="article-header">通知<a class="article-header-anchor" href="#notification"><img src="img/link.png" border="0"></a></h3>
+        <div class="article-content">
+          プロジェクト管理ツールには以下の通知が存在します。<br>
+          <table>
+            <tr><th>種類</th><th>説明</th></tr>
+            <tr><td>コメント通知</td><td>タスクコメント追加時に、通知ユーザーを指定した場合に通知されます。</td></tr>
+            <tr><td>新規タスク割り当て通知</td><td>タスクのメンバーに割り当てられた場合に通知されます。タスクの操作者自身には通知されません。<br></td></tr>
+            <tr><td>着手可能タスク通知</td><td>前のタスクがすべて完了した場合に、次のタスクのメンバーに通知されます。</td></tr>
+          </table><br>
+          通知はメール・およびプロジェクト管理ツール上で確認することができます。<br>
+          <img class="inline-image" src="img/article/notification1.png" /><br>
+          <span style="color: white; background-color:rgb(56, 151, 141); border-radius: 4px;">&nbsp;未読は白抜き&nbsp;</span>となり、
+          <span style="color:rgb(56, 151, 141); border: solid 1px rgb(56, 151, 141); border-radius: 4px;">&nbsp;既読は白背景&nbsp;</span>&nbsp;になります。<br>
+          <br>
+          ※プロジェクト管理ツール上で保持される通知は最大100件です。<br>
+          上記を超えた場合は<b>古いものから自動的に削除</b>されます。
+        </div>
+        <h4 id="notification_personal_setting" class="article-header sub">通知設定<a class="article-header-anchor" href="#notification_personal_setting"><img src="img/link.png" border="0"></a></h4>
+        <div class="article-content">
+          通知設定では、通知の受信制御の設定を行うことができます<br>
+          通知設定を行うには、ヘッダー部右上から通知設定を選択してください。<br>
+          <img class="inline-image" src="img/article/notification2.png" /><br>
+          <table>
+            <tr><th>設定項目</th><th>説明</th></tr>
+            <tr><td>すべて受け取る</td><td>すべての通知を受け取ります。</td></tr>
+            <tr><td>メール通知のみ受け取る</td><td>メール通知のみ受け取ります。プロジェクト管理ツール上では通知されません。<br></td></tr>
+            <tr><td>ウェブ通知のみ受け取る</td><td>プロジェクト管理ツール上でのみ、通知を受け取ります。メールによる通知はされません。<br></td></tr>
+            <tr><td>すべて受け取らない</td><td>すべての通知を受け取りません。</td></tr>
+          </table><br>
+          初期値はすべて受け取るに設定されています。
+        </div>
+
         <h3 id="profile" class="article-header">個人設定<a class="article-header-anchor" href="#profile"><img src="img/link.png" border="0"></a></h3>
         <div class="article-content">
           個人設定では名前、プロフィール画像、パスワード更新を行うことができます。<br>
